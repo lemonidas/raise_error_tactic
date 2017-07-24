@@ -1,4 +1,4 @@
-DECLARE PLUGIN "raise_error"
+DECLARE PLUGIN "raise_error_level"
 
 open Pp
 open Constrarg
@@ -14,6 +14,6 @@ let raise_error (t : Geninterp.Val.t) =
 
 
 TACTIC EXTEND raise_error
-  | ["raise_error" tactic(t)] -> [ raise_error t ]
+  | ["raise_error_level" tactic(t)] -> [ raise_error t ]
 END;;
 
